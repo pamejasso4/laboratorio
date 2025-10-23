@@ -5,7 +5,7 @@ import java.util.Scanner;
     Scanner sc = new Scanner(System.in);
     BilleteraParque billetera = new BilleteraParque(100);
 
-        // Crear los premios
+        
     Premio camiseta = new Premio("Camiseta", 150);
     Premio sombrero = new Premio("Sombrero para el sol", 350);
     Premio tenis = new Premio("Tenis", 600);
@@ -13,12 +13,13 @@ import java.util.Scanner;
     int opcion;
 
     do {
-        System.out.println("\n--- MENÚ ---");
+        System.out.println("\n--- Administrador de tareas para parques temáticos ---");
         System.out.println("1. Agregar tickets");
         System.out.println("2. Establecer tickets");
         System.out.println("3. Comprar premio");
         System.out.println("4. Establecer festivo (actual: " + (BilleteraParque.isFestivo() ? "Sí" : "No") + ")");
         System.out.println("5. Salir");
+        System.out.println("Tu billetera tiene " + billetera.getTickets() + " boletos");
         System.out.print("Seleccione una opción: ");
         opcion = sc.nextInt();
 
@@ -56,8 +57,11 @@ import java.util.Scanner;
 
             case 4:
                 BilleteraParque.cambiarFestivo();
-                System.out.println("El estado festivo ha cambiado. Ahora es festivo: " + (BilleteraParque.isFestivo() ? "Sí" : "No"));
+                if (BilleteraParque.isFestivo()) {
+                System.out.println("Ahora es un día festivo");
+                }
                 break;
+
 
             case 5:
                 System.out.println("Gracias por usar el sistema.");
