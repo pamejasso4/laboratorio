@@ -20,7 +20,6 @@ public class BilleteraParque {
         }
     }
 
-    // 👇 Nuevo método compatible con el Main
     public void establecerTickets(int tickets) {
         setTickets(tickets);
     }
