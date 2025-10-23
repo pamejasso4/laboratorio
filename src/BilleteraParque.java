@@ -51,8 +51,7 @@ public class BilleteraParque {
 
     if (this.tickets >= precio) {
         this.tickets -= precio;
-        System.out.println(" Has comprado un(a) " + premio.getNombre() + 
-                           " por " + precio + " tickets.");
+        System.out.println(" Has comprado un(a) " + premio.getNombre() + " por " + precio + " tickets.");
         System.out.println("Tickets restantes: " + this.tickets);
         return true;
     } else {
